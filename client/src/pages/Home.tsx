@@ -443,16 +443,16 @@ export default function Home() {
             Achievements & Awards
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch max-w-6xl mx-auto">
             {achievements.map((achievement, idx) => (
               <div
                 key={idx}
-                className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-md rounded-lg p-6 border border-purple-500/50 hover:border-purple-400 hover:-translate-y-2 transition-all duration-300 text-center"
-                style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.2)' }}
+                className="h-full bg-gradient-to-br from-purple-900/25 to-pink-900/25 backdrop-blur-md rounded-xl p-7 lg:p-8 border border-purple-500/50 hover:border-purple-400 hover:-translate-y-1 transition-all duration-300 text-center"
+                style={{ boxShadow: '0 0 24px rgba(168, 85, 247, 0.22)' }}
               >
-                <h3 className="text-xl font-bold mb-2 text-purple-300">{achievement.title}</h3>
-                <p className="text-purple-400 font-semibold mb-2">{achievement.subtitle}</p>
-                <p className="text-gray-300 text-sm mb-3">{achievement.description}</p>
+                <h3 className="text-xl lg:text-2xl font-bold mb-2 text-purple-300">{achievement.title}</h3>
+                <p className="text-purple-400 font-semibold mb-3">{achievement.subtitle}</p>
+                <p className="text-gray-300 text-sm lg:text-base leading-relaxed mb-4">{achievement.description}</p>
                 {achievement.prize && (
                   <p className="text-sm font-semibold text-pink-400">{achievement.prize}</p>
                 )}
