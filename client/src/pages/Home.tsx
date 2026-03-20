@@ -104,10 +104,22 @@ export default function Home() {
 
   const experience = [
     {
+      role: 'Junior Data Scientist',
+      company: 'FARMFIX AGI PVT LTD',
+      period: 'Dec 2025 - Present',
+      description: 'Developing AI automation solutions and building intelligent systems. Working on artificial intelligence projects with focus on real-world applications and scalable deployment.',
+    },
+    {
       role: 'AI Research Intern',
       company: 'IIT Gandhinagar - LINGO Research Group',
       period: 'Sep 2025 - Present',
       description: 'Conducting dataset curation and linguistic annotation for Hindi-English code-mixed text. Designing experiments with LLMs for multilingual NLP.',
+    },
+    {
+      role: 'Open Source Contributor',
+      company: 'AOSSIE',
+      period: 'Nov 2025 - Jan 2026',
+      description: 'Contributed to the Resonate Backend project. Collaborated with mentors to review PRs and improve documentation. Strengthened understanding of open-source workflows, Git branching, and CI/CD pipelines.',
     },
     {
       role: 'Google Student Ambassador',
@@ -165,26 +177,10 @@ export default function Home() {
                 {item}
               </button>
             ))}
-            <Button
-              onClick={toggleTheme}
-              variant="outline"
-              size="sm"
-              className="rounded-full border-purple-500/50 hover:border-purple-400 hover:bg-purple-500/10"
-            >
-              {theme === 'dark' ? '☀️' : '🌙'}
-            </Button>
           </div>
 
           {/* Mobile Menu */}
           <div className="md:hidden flex items-center gap-4">
-            <Button
-              onClick={toggleTheme}
-              variant="outline"
-              size="sm"
-              className="rounded-full border-purple-500/50"
-            >
-              {theme === 'dark' ? '☀️' : '🌙'}
-            </Button>
             <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X size={24} className="text-purple-400" /> : <Menu size={24} className="text-purple-400" />}
             </button>
@@ -214,7 +210,7 @@ export default function Home() {
         <div className="container mx-auto px-4 z-10">
           <div className="max-w-4xl mx-auto text-center animate-in">
             <div className="mb-6 inline-block">
-              <span className="text-purple-400 font-bold text-lg drop-shadow-lg" style={{ textShadow: '0 0 10px rgba(168, 85, 247, 0.8)' }}>FULL STACK AI/ML DEVELOPER</span>
+              <span className="text-purple-400 font-bold text-lg drop-shadow-lg" style={{ textShadow: '0 0 10px rgba(168, 85, 247, 0.8)' }}>4X HACKATHON WINNER | FULL STACK AI/ML DEVELOPER</span>
             </div>
             
             <h1 className="text-6xl md:text-7xl font-black mb-6 leading-tight" style={{
