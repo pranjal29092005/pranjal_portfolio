@@ -156,9 +156,9 @@ export default function Home() {
 
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/80 backdrop-blur-md border-b border-purple-500/30' : 'bg-transparent'}`}>
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg" style={{ textShadow: '0 0 20px rgba(168, 85, 247, 0.8)' }}>
-            PRANJAL
+        <div className="container mx-auto px-4 py-3 md:py-4 min-h-[80px] md:min-h-[92px] relative flex justify-end items-center">
+          <div className="absolute left-1/2 -translate-x-1/2 text-3xl md:text-4xl leading-tight whitespace-nowrap px-4 py-1 font-bold bg-gradient-to-r from-purple-400 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg" style={{ textShadow: '0 0 20px rgba(168, 85, 247, 0.8)' }}>
+            Pranjal Yadav
           </div>
 
           {/* Desktop Menu */}
