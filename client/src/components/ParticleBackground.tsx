@@ -5,7 +5,6 @@ interface Particle {
   y: number;
   vx: number;
   vy: number;
-  size: number;
   opacity: number;
 }
 
@@ -29,15 +28,14 @@ export const ParticleBackground: React.FC = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Initialize particles
-    const particleCount = 50;
+    // Initialize particles - create elegant line patterns
+    const particleCount = 40;
     particlesRef.current = Array.from({ length: particleCount }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 2,
-      vy: (Math.random() - 0.5) * 2,
-      size: Math.random() * 2 + 1,
-      opacity: Math.random() * 0.5 + 0.3,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: (Math.random() - 0.5) * 0.5,
+      opacity: Math.random() * 0.3 + 0.1,
     }));
 
     // Track mouse position
@@ -48,15 +46,14 @@ export const ParticleBackground: React.FC = () => {
 
     // Animation loop
     const animate = () => {
-      // Clear canvas with semi-transparent background for trail effect
-      ctx.fillStyle = 'rgba(255, 255, 255, 0.02)';
+      // Clear canvas with black background
+      ctx.fillStyle = '#000000';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       const particles = particlesRef.current;
 
-      // Update and draw particles
-      particles.forEach((particle, index) => {
-        // Update position
+      // Update particle positions
+      particles.forEach((particle) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
 
@@ -68,42 +65,40 @@ export const ParticleBackground: React.FC = () => {
         particle.x = Math.max(0, Math.min(canvas.width, particle.x));
         particle.y = Math.max(0, Math.min(canvas.height, particle.y));
 
-        // Mouse interaction
+        // Mouse interaction - subtle repulsion
         const dx = mouseRef.current.x - particle.x;
         const dy = mouseRef.current.y - particle.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
-        const maxDistance = 150;
+        const maxDistance = 200;
 
         if (distance < maxDistance) {
           const angle = Math.atan2(dy, dx);
-          const force = (1 - distance / maxDistance) * 2;
+          const force = (1 - distance / maxDistance) * 0.3;
           particle.vx -= Math.cos(angle) * force;
           particle.vy -= Math.sin(angle) * force;
         }
+      });
 
-        // Draw particle
-        ctx.fillStyle = `rgba(59, 130, 246, ${particle.opacity})`;
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fill();
+      // Draw elegant connections between particles
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const p1 = particles[i];
+          const p2 = particles[j];
+          const dx = p2.x - p1.x;
+          const dy = p2.y - p1.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
 
-        // Draw connections
-        for (let i = index + 1; i < particles.length; i++) {
-          const other = particles[i];
-          const dx2 = other.x - particle.x;
-          const dy2 = other.y - particle.y;
-          const distance2 = Math.sqrt(dx2 * dx2 + dy2 * dy2);
-
-          if (distance2 < 100) {
-            ctx.strokeStyle = `rgba(59, 130, 246, ${(1 - distance2 / 100) * 0.3})`;
-            ctx.lineWidth = 1;
+          if (distance < 150) {
+            const opacity = (1 - distance / 150) * 0.15;
+            ctx.strokeStyle = `rgba(168, 85, 247, ${opacity})`;
+            ctx.lineWidth = 0.5;
             ctx.beginPath();
-            ctx.moveTo(particle.x, particle.y);
-            ctx.lineTo(other.x, other.y);
+            ctx.moveTo(p1.x, p1.y);
+            ctx.lineTo(p2.x, p2.y);
             ctx.stroke();
           }
         }
-      });
+      }
 
       requestAnimationFrame(animate);
     };
@@ -120,7 +115,7 @@ export const ParticleBackground: React.FC = () => {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none"
-      style={{ background: 'transparent' }}
+      style={{ background: '#000000' }}
     />
   );
 };

@@ -83,22 +83,22 @@ export default function Home() {
     {
       category: 'AI/ML',
       items: ['LLMs', 'NLP', 'Transformers', 'Deep Learning', 'CNN', 'Generative AI', 'RAG Systems', 'Fine-tuning'],
-      icon: '🧠',
+      icon: '',
     },
     {
       category: 'Web Frameworks',
       items: ['React', 'Next.js', 'Flask', 'FastAPI', 'Streamlit', 'HTML/CSS'],
-      icon: '⚡',
+      icon: '',
     },
     {
       category: 'Tools & Platforms',
       items: ['Docker', 'AWS', 'Git', 'Hugging Face', 'Ollama', 'Power BI', 'Postman'],
-      icon: '🛠️',
+      icon: '',
     },
     {
       category: 'Languages',
       items: ['Python', 'JavaScript', 'SQL', 'C++', 'Java', 'DSA'],
-      icon: '💻',
+      icon: '',
     },
   ];
 
@@ -143,7 +143,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(168, 85, 247, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%)' }}>
+    <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <ParticleBackground />
 
       {/* Navigation */}
@@ -214,7 +214,6 @@ export default function Home() {
         <div className="container mx-auto px-4 z-10">
           <div className="max-w-4xl mx-auto text-center animate-in">
             <div className="mb-6 inline-block">
-              <Zap className="inline mr-2 text-purple-400 animate-pulse" size={32} />
               <span className="text-purple-400 font-bold text-lg drop-shadow-lg" style={{ textShadow: '0 0 10px rgba(168, 85, 247, 0.8)' }}>FULL STACK AI/ML DEVELOPER</span>
             </div>
             
@@ -383,8 +382,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             {skills.map((skillGroup, idx) => (
               <div key={idx} className="group">
-                <div className="text-2xl font-bold mb-6 text-purple-300 flex items-center gap-3">
-                  <span className="text-3xl">{skillGroup.icon}</span>
+                <div className="text-2xl font-bold mb-6 text-purple-300">
                   {skillGroup.category}
                 </div>
                 <div className="flex flex-wrap gap-3">
@@ -460,7 +458,6 @@ export default function Home() {
                 className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-md rounded-lg p-6 border border-purple-500/50 hover:border-purple-400 hover:-translate-y-2 transition-all duration-300 text-center"
                 style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.2)' }}
               >
-                <div className="text-4xl mb-4">🏆</div>
                 <h3 className="text-xl font-bold mb-2 text-purple-300">{achievement.title}</h3>
                 <p className="text-purple-400 font-semibold mb-2">{achievement.subtitle}</p>
                 <p className="text-gray-300 text-sm mb-3">{achievement.description}</p>
@@ -573,7 +570,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-8 border-t border-purple-500/20 bg-black/50">
         <div className="container mx-auto px-4 text-center text-gray-400">
-          <p>© 2026 Pranjal Yadav. All rights reserved. Built with React, Tailwind CSS, and ❤️</p>
+          <p>© 2026 Pranjal Yadav. All rights reserved. Built with React, Tailwind CSS, and passion for innovation.</p>
         </div>
       </footer>
     </div>
