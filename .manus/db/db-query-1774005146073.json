@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE `contactSubmissions` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`name` varchar(255) NOT NULL,\n\t`email` varchar(320) NOT NULL,\n\t`subject` varchar(255) NOT NULL,\n\t`message` text NOT NULL,\n\t`createdAt` timestamp NOT NULL DEFAULT (now()),\n\tCONSTRAINT `contactSubmissions_id` PRIMARY KEY(`id`)\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 21LW6YxQjqP9R6i.root --database ky738dGJFsLLgd4N9HazKu --execute CREATE TABLE `contactSubmissions` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`name` varchar(255) NOT NULL,\n\t`email` varchar(320) NOT NULL,\n\t`subject` varchar(255) NOT NULL,\n\t`message` text NOT NULL,\n\t`createdAt` timestamp NOT NULL DEFAULT (now()),\n\tCONSTRAINT `contactSubmissions_id` PRIMARY KEY(`id`)\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1945
+}
