@@ -143,14 +143,10 @@ export default function Home() {
       prize: '₹40,000 + ₹20,000 IntelliJ License',
     },
     {
-      title: 'SQL 50 Badge',
-      subtitle: 'LeetCode',
-      description: 'Advanced SQL proficiency certification',
-    },
-    {
-      title: 'SQL Gold Badge',
-      subtitle: 'HackerRank',
-      description: 'Expert-level SQL problem solving',
+      title: 'AIDTM Hackathon Runner-Up',
+      subtitle: '2nd Place - 200+ Teams',
+      description: 'Automated Wagon Detection using Computer Vision. Real-time detection with damage inspection under varying environmental conditions. Optimized model accuracy while maintaining strict latency requirements.',
+      prize: '₹50,000+ Prize and Recognition',
     },
   ];
 
