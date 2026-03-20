@@ -24,7 +24,8 @@ function AppRouter() {
 // - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
 
 function App() {
-  const base = import.meta.env.BASE_URL || "/";
+  const rawBase = import.meta.env.BASE_URL || "/";
+  const base = rawBase === "/" ? "" : rawBase.replace(/\/$/, "");
 
   return (
     <ErrorBoundary>
