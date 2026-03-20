@@ -157,7 +157,7 @@ export default function Home() {
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/80 backdrop-blur-md border-b border-purple-500/30' : 'bg-transparent'}`}>
         <div className="container mx-auto px-4 py-3 md:py-4 min-h-[80px] md:min-h-[92px] relative flex justify-end items-center">
-          <div className="absolute left-1/2 -translate-x-1/2 text-3xl md:text-4xl leading-tight whitespace-nowrap px-4 py-1 font-bold bg-gradient-to-r from-purple-400 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg" style={{ textShadow: '0 0 20px rgba(168, 85, 247, 0.8)' }}>
+          <div className="absolute left-1/2 -translate-x-1/2 text-2xl sm:text-3xl md:text-4xl leading-tight whitespace-nowrap px-4 py-1 font-bold bg-gradient-to-r from-purple-400 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg" style={{ textShadow: '0 0 20px rgba(168, 85, 247, 0.8)' }}>
             Pranjal Yadav
           </div>
 
@@ -209,7 +209,7 @@ export default function Home() {
               <span className="text-purple-400 font-bold text-lg drop-shadow-lg" style={{ textShadow: '0 0 10px rgba(168, 85, 247, 0.8)' }}>4X HACKATHON WINNER | FULL STACK AI/ML DEVELOPER</span>
             </div>
             
-            <h1 className="text-6xl md:text-7xl font-black mb-6 leading-tight" style={{
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-black mb-6 leading-tight" style={{
               background: 'linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #a855f7 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -266,9 +266,9 @@ export default function Home() {
       </section>
 
       {/* Resume Section */}
-      <section className="py-20 relative border-t border-purple-500/20">
+      <section className="py-16 md:py-20 relative border-t border-purple-500/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-black mb-16 text-center" style={{
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-12 md:mb-16 text-center" style={{
             background: 'linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #a855f7 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
@@ -299,9 +299,9 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 relative border-t border-purple-500/20">
+      <section id="projects" className="py-16 md:py-20 relative border-t border-purple-500/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-black mb-16 text-center" style={{
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-12 md:mb-16 text-center" style={{
             background: 'linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #a855f7 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
@@ -312,17 +312,17 @@ export default function Home() {
             Featured Projects
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
             {projects.map((project, idx) => (
               <div
                 key={idx}
-                className="group bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-md rounded-lg p-6 border border-purple-500/50 hover:border-purple-400 transition-all duration-300 hover:-translate-y-2"
+                className="group h-full flex flex-col bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-md rounded-lg p-6 border border-purple-500/50 hover:border-purple-400 transition-all duration-300 hover:-translate-y-2"
                 style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.2)' }}
               >
                 <h3 className="text-xl font-bold mb-3 text-purple-300 group-hover:text-purple-200 transition-all duration-300">
                   {project.title}
                 </h3>
-                <p className="text-gray-300 mb-4">
+                <p className="text-gray-300 mb-4 grow">
                   {project.description}
                 </p>
 
@@ -358,9 +358,9 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 relative border-t border-purple-500/20">
+      <section id="skills" className="py-16 md:py-20 relative border-t border-purple-500/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-black mb-16 text-center" style={{
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-12 md:mb-16 text-center" style={{
             background: 'linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #a855f7 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
@@ -395,9 +395,9 @@ export default function Home() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-20 relative border-t border-purple-500/20">
+      <section id="experience" className="py-16 md:py-20 relative border-t border-purple-500/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-black mb-16 text-center" style={{
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-12 md:mb-16 text-center" style={{
             background: 'linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #a855f7 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
@@ -430,9 +430,9 @@ export default function Home() {
       </section>
 
       {/* Achievements Section */}
-      <section className="py-20 relative border-t border-purple-500/20">
+      <section className="py-16 md:py-20 relative border-t border-purple-500/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-black mb-16 text-center" style={{
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-12 md:mb-16 text-center" style={{
             background: 'linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #a855f7 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
@@ -463,9 +463,9 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 relative border-t border-purple-500/20">
+      <section id="contact" className="py-16 md:py-20 relative border-t border-purple-500/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-black mb-16 text-center" style={{
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-12 md:mb-16 text-center" style={{
             background: 'linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #a855f7 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
@@ -476,8 +476,8 @@ export default function Home() {
             Get In Touch
           </h2>
 
-          <div className="max-w-2xl mx-auto">
-            <form onSubmit={handleFormSubmit} className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-md border border-purple-500/50 rounded-lg p-8 space-y-6" style={{ boxShadow: '0 0 30px rgba(168, 85, 247, 0.3)' }}>
+          <div className="max-w-3xl mx-auto">
+            <form onSubmit={handleFormSubmit} className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-md border border-purple-500/50 rounded-lg p-5 sm:p-8 space-y-6" style={{ boxShadow: '0 0 30px rgba(168, 85, 247, 0.3)' }}>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-bold mb-2 text-purple-300">Name</label>
@@ -541,19 +541,35 @@ export default function Home() {
               </Button>
             </form>
 
-            <div className="mt-12 grid md:grid-cols-3 gap-6 text-center">
-              <div>
+            <div className="mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 text-center items-stretch">
+              <a
+                href="mailto:pranjalyadav92905@gmail.com"
+                className="h-full min-h-[128px] rounded-lg p-4 border border-purple-500/40 bg-purple-500/5 hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 flex flex-col justify-center items-center gap-2"
+                style={{ boxShadow: '0 0 15px rgba(168, 85, 247, 0.2)' }}
+              >
                 <Mail className="mx-auto mb-3 text-purple-400" size={32} style={{ filter: 'drop-shadow(0 0 10px rgba(168, 85, 247, 0.8))' }} />
-                <p className="text-gray-300">pranjalyadav92905@gmail.com</p>
-              </div>
-              <div>
+                <p className="text-gray-300 text-xs sm:text-sm break-all">pranjalyadav92905@gmail.com</p>
+              </a>
+              <a
+                href="https://github.com/pranjal29092005"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="h-full min-h-[128px] rounded-lg p-4 border border-purple-500/40 bg-purple-500/5 hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 flex flex-col justify-center items-center gap-2"
+                style={{ boxShadow: '0 0 15px rgba(168, 85, 247, 0.2)' }}
+              >
                 <Github className="mx-auto mb-3 text-purple-400" size={32} style={{ filter: 'drop-shadow(0 0 10px rgba(168, 85, 247, 0.8))' }} />
-                <p className="text-gray-300">github.com/pranjal29092005</p>
-              </div>
-              <div>
+                <p className="text-gray-300 text-xs sm:text-sm break-all">github.com/pranjal29092005</p>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/pranjal-yadav-4507bb310"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="h-full min-h-[128px] rounded-lg p-4 border border-purple-500/40 bg-purple-500/5 hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 flex flex-col justify-center items-center gap-2"
+                style={{ boxShadow: '0 0 15px rgba(168, 85, 247, 0.2)' }}
+              >
                 <Linkedin className="mx-auto mb-3 text-purple-400" size={32} style={{ filter: 'drop-shadow(0 0 10px rgba(168, 85, 247, 0.8))' }} />
-                <p className="text-gray-300">pranjal-yadav-4507bb310</p>
-              </div>
+                <p className="text-gray-300 text-xs sm:text-sm break-words">pranjal-yadav-4507bb310</p>
+              </a>
             </div>
           </div>
         </div>
